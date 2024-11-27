@@ -4,6 +4,8 @@ This repository contains supplemental information associated with a paper entitl
 
 The paper was written by Nathan M. Brichta. Levi Tegg, Luke W. Giles, John E. Daniels, and Julie. M. Cairney.
 
+
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -26,6 +28,10 @@ The graphical output of the real-space method is a 3-panel graphic, including th
 
 ![Graphical output of the real-space method](README_files/RealSpaceMethod.png)
 
+*Illustration of the real-space method:   
+(a) Color-coded line selection ROIs constitute Regions 1 and 2 in the median filtered image,* $I_{filter}$*. On the bottom of the image, black arrows indicate the major domain boundaries, and red arrows indicate the approximate boundaries between nano-domains.  
+(b) This plot shows the result of the peak-finding algorithm on 4 random line profiles, with the identified minima highlighted with red lines.  
+(c) Histograms of the peak-to-peak (valley-to-valley) distances for both regions, according to the ROI color in (a). A Gaussian curve is fit to the resulting distributions for both regions.*
 
 ## User guide
 ### Real-space method
@@ -44,7 +50,7 @@ Procedure:
    
    ![ROI Manager](README_files/ROI_manager.png)
    
-7. Select the Line segment tool in the toolbar:
+7. Select the Line segment tool in the ImageJ toolbar:
    
    ![Line selection tool](README_files/line_tool.png)
 	
@@ -54,6 +60,7 @@ Procedure:
 
   <img src="README_files/roi_image.png" align="centre" height="500" width="500" >
   
+***Note: If you reuse the line selection to create the rest of your ROIs, the end result will be a .csv with the x-values (distance) in the first column, then y-values (pixel intensity) for each ROI in subsequent columns. If you use new line selections for each ROI, each line profile will have its own associated x and y values contained in the .csv. Personally, I recommend reusing the line selection to keep angles consistent, but in the cases of images with unusual or complex geometry, the latter might be preferred. There is a commented section in the program that also explains this.***
 
 8. Once all ROIs have been saved, select all the ROIs (`ctrl-A` after selecting one) and save these for future reference (`More>>` > `Save...`)
   
